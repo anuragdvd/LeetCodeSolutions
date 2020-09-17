@@ -1,5 +1,12 @@
-// Minimum ASCII Delete Sum for Two Strings :: https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings
+/* Minimum ASCII Delete Sum for Two Strings :: https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings 
 
+
+dp(i,j) = min ( dp[i-1][j] + s1[i-1] ( if we remove character from first string ) , 
+		dp[i][j-1] + s2[j-1] ( if we remove character from second string ) ,
+		dp[i-1][j-1] + s1[i-1] + s2[j-1] (if we remove character from both strings ) ) 
+
+
+*/
 
 class Solution {
 public:
